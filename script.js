@@ -2,17 +2,15 @@ function mincost(arr)
 { 
 //write your code here
 // return the min cost
-	let result = []
+	let result = 0
  while(arr.length>1){
      arr.sort()
      let x = arr[0]+arr[1]
-     result.push(x)
+     result +=x
      arr.splice(0,2)
      arr.push(x)
  }
- let sum = 0
- result.forEach((ele)=>sum+=ele)
-return sum
+return result
   
 }
 
